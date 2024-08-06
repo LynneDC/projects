@@ -264,7 +264,55 @@ body {
 }
 
 /* end of services  */
-
+/* skills */
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container1 {
+  width: 600px;
+  height: 500px;
+  padding: 75px 90px;
+  margin: 120px;
+}
+.heading1 {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+  text-align: center;
+  margin-bottom: 54px;
+}
+.bar{
+  font-size: 23px;
+}
+.Technical-bars  .bar {
+  margin-top: 40px 0;
+}
+.Technical-bars .bar:first-child {
+  margin-top: 0;
+}
+.Technical-bars .bar:last-child {
+  margin-bottom: 0;
+}
+.Technical-bars .bar .info {
+  margin-bottom: 5px;
+}
+.Technical-bars .bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.3s 1s linear forwards;
+  opacity: 0;
+}
+.Technical-bars .bar .progress-line {
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: scale 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+/* continue from 52.34 */
 @keyframes slideRight {
   0% {
     transform: translateX(-100px);
