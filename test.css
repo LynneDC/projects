@@ -1,0 +1,138 @@
+body {
+  background-color: #0f234d; /* Adjust the background color as needed */
+  color: #fff; /* Text color for better visibility on dark background */
+}
+
+.skills-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.heading {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.technical-skills,
+.professional-skills {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.skill-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.skill-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.radial-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  background-color: #000; /* Change color to match your design */
+  border-radius: 50%;
+}
+
+.skill-label {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}.redial-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.redial-bar .redial-bar1 {
+  width: 45%;
+  height: 170px;
+  position: relative;
+  text-align: center;
+}
+
+.redial-bar .redial-bar1 svg {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+}
+
+.redial-bar .redial-bar1 .progress-bar {
+  stroke-width: 18;
+  fill: transparent;
+  stroke: black;
+}
+
+.redial-bar .redial-bar1 .path {
+  stroke-width: 10;
+  stroke: #76bee7;
+  fill: transparent;
+  stroke-dasharray: 502; /* This should be the circumference of the circle */
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+  animation: animate-path 2s ease-out forwards;
+}
+
+.redial-bar .redial-bar1:nth-child(1) .path {
+  animation: animate-path-90 2s ease-out forwards;
+}
+
+.redial-bar .redial-bar1:nth-child(2) .path {
+  animation: animate-path-65 2s ease-out forwards;
+}
+
+@keyframes animate-path-90 {
+  100% {
+    stroke-dashoffset: calc(502 * (1 - 0.9)); /* 90% */
+  }
+}
+
+@keyframes animate-path-65 {
+  100% {
+    stroke-dashoffset: calc(502 * (1 - 0.65)); /* 65% */
+  }
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.text {
+  margin-top: 130px;
+  font-size: 16px;
+}
